@@ -1,6 +1,3 @@
-
-
-
 function myclick() {
     let m = document.getElementById('numbers').value;
     console.log(m);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseFloat(prompt('nhap day so NT'));
+
+        function checkSNT(num) {
+
+            let flag = false;
+            if (num == 2) {
+                flag = true;
+            }
+            if (num < 2) {
+                flag = false;
+            }
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    flag = false;
+                    break;
+                }
+                flag = true;
+            }
+            console.log(flag);
+            return flag;
+        }
+        // checkSNT(a) 
+
+        for (let j = 0, count = 0; count < a; j++) {
+            if (checkSNT(j) === true) {
+                document.write(j + "<br>");
+                count++;
+            };
+        }
+
+    </script>
+</body>
+
+</html>
